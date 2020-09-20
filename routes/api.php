@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/post', 'Api\PostController@create');
     Route::get('/post', 'Api\PostController@index');
     Route::get('/post/{id}', 'Api\PostController@show');
+    Route::delete('/post/{id}', 'Api\PostController@remove');
 
     Route::post('/comment', 'Api\CommentController@create');
     Route::get('/comment/{post_id}', 'Api\CommentController@getComments');
